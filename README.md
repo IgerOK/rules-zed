@@ -2,14 +2,15 @@
 
 Проект конфигурации AI-агента Zed IDE. Единый источник истины для
 переноса настроек на чистую машину: глобальные правила (с блоками
-«Project Bootstrapping» и «Loop Prevention & Token Economy»), skills
+«Персона и стандарты качества», «Project Bootstrapping» и
+«Loop Prevention & Token Economy»), skills
 `git-workflow` и `project-doctor`, настройка провайдера/модели и иллюстрация.
 
 ## Состав
 
 | Файл | Назначение |
 |---|---|
-| [`rules-Zed.md`](rules-Zed.md) | Объединённая конфигурация Zed-агента: §1 глобальный `AGENTS.md` (включая блоки `Project Bootstrapping` и `Loop Prevention & Token Economy`), §2 skill `git-workflow`, §3 провайдер и модель (рекомендуется Agnes, допустим любой LLM-агрегатор; reasoning effort **HIGH** для кода/рефакторинга, `MEDIUM/LOW` — для документации), §4 нюансы (skills, обновления Zed, проектный `AGENTS.md`), §5 чек-лист проверки, §6 skill `project-doctor` |
+| [`rules-Zed.md`](rules-Zed.md) | Объединённая конфигурация Zed-агента: §1 глобальный `AGENTS.md` (включая блоки `Персона и стандарты качества`, `Project Bootstrapping`, `Loop Prevention & Token Economy`), §2 skill `git-workflow`, §3 провайдер и модель (рекомендуется Agnes, допустим любой LLM-агрегатор; reasoning effort **HIGH** для кода, `MEDIUM/LOW` — для документации, контекст **512K** (524288)), §4 нюансы (skills, обновления Zed, проектный `AGENTS.md`), §5 чек-лист проверки, §6 skill `project-doctor` (4-шаговая диагностика) |
 | [`agnes1high.png`](agnes1high.png) | Скриншот настройки провайдера в Zed (Settings → Models → API Providers): OpenAI-совместимый эндпоинт Agnes, модель с reasoning effort **High** (ключ маскирован, хранится в системном keychain, не в `settings.json`) |
 | [`.gitignore`](.gitignore) | Игнорируемые файлы для публикации в Git (ОС-хлам, служебные каталоги Zed, временные файлы) |
 | [`LICENSE`](LICENSE) | Лицензия проекта — MIT (английский оригинал + неофициальный перевод на русский) |
@@ -26,8 +27,8 @@
 3. Скопировать `rules-Zed.md` на машину и выполнить его инструкции §1–§6
    (вручную или передать их агенту Zed целиком).
 4. Настроить провайдера — это ручной шаг в Settings → Models (§3 документа:
-   базовый URL/модель и Reasoning effort **HIGH**); API-ключ вставляется
-   только туда и не попадает в файлы.
+   базовый URL/модель, Reasoning effort **HIGH** и Context limit **512K**);
+   API-ключ вставляется только туда и не попадает в файлы.
 5. Открыть **новый** агент-чат: список skills и правил фиксируется при создании
    треда и в уже открытых диалогах не обновляется (перезапуск Zed не помогает —
    старые чаты восстанавливаются со «замороженным» снимком).
