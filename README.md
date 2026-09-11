@@ -11,7 +11,7 @@
 | Файл | Назначение |
 |---|---|
 | [`rules-Zed.md`](rules-Zed.md) | Объединённая конфигурация Zed-агента: §1 глобальный `AGENTS.md` (включая блоки `Персона и стандарты качества`, `Project Bootstrapping`, `Loop Prevention & Token Economy`), §2 skill `git-workflow`, §3 провайдер и модель (рекомендуется Agnes, допустим любой LLM-агрегатор; reasoning effort **HIGH** для кода, `MEDIUM/LOW` — для документации, контекст **512K** (524288); также 3 альтернативных провайдера для бесплатной/дешёвой отработки: B.AI, NaraRouter, dahl.global), §4 нюансы (skills, обновления Zed, проектный `AGENTS.md`), §5 чек-лист проверки, §6 skill `project-doctor` (4-шаговая диагностика) |
-| [`agnes1high.png`](agnes1high.png) | Скриншот настройки провайдера в Zed (Settings → Models → API Providers): OpenAI-совместимый эндпоинт Agnes, модель с reasoning effort **High** (ключ маскирован, хранится в системном keychain, не в `settings.json`) |
+| [`agnes1high.png`](agnes1high.png) | Скриншот настройки провайдера в Zed (Settings → Models → API Providers): OpenAI-совместимый эндпоинт Agnes, модель **Agnes 3.0 Flash** с reasoning effort **High** (ключ маскирован, хранится в системном keychain, не в `settings.json`) |
 | [`.gitignore`](.gitignore) | Игнорируемые файлы для публикации в Git (ОС-хлам, служебные каталоги Zed, временные файлы) |
 | [`LICENSE`](LICENSE) | Лицензия проекта — MIT (английский оригинал + неофициальный перевод на русский) |
 
