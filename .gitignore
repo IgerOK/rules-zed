@@ -4,9 +4,11 @@ Thumbs.db
 
 # Zed
 .zed/
-.agents/  # проектные skill-дубли — не публиковать (см. rules-Zed.md §4)
+# проектные skill-дубли — не публиковать (см. rules-Zed.md §4)
+.agents/
 
 # Временные файлы
 *.tmp
 tmp*
-nul  # Windows: артефакт редиректа "cmd /c ... > nul" (нулевой файл в корне)
+# Windows: артефакт редиректа "cmd /c ... > nul" (нулевой файл в корне)
+nul
